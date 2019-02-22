@@ -4,12 +4,21 @@
  * construct available in Javascript.
  */
 
+function max(a, b) {
+  if (a > b) return a;
+  else if (a === b) return 0;
+  else return b;
+}
+
 // ...
 
 /**
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
+let array = [1, 2, 3];
+
+Math.max(a, b, c);
 
 // ...
 
@@ -69,67 +78,67 @@
 
 /* eslint-disable no-undef */
 
-import test from 'ava'
+import test from "ava";
 
-test('max()', t => {
-  t.is(max(1, 3), 3)
-  t.is(max(0, 3), 3)
-  t.is(max(10, 3), 10)
-  t.is(max(-1, -3), -1)
-})
+test("max()", t => {
+  t.is(max(1, 3), 3);
+  t.is(max(0, 3), 3);
+  t.is(max(10, 3), 10);
+  t.is(max(-1, -3), -1);
+});
 
-test('maxOfThree()', t => {
-  t.is(maxOfThree(1, 3, 2), 3)
-  t.is(maxOfThree(0, 3, -1), 3)
-  t.is(maxOfThree(10, 3, 50), 50)
-  t.is(maxOfThree(-1, -3, -10), -1)
-})
+test("maxOfThree()", t => {
+  t.is(maxOfThree(1, 3, 2), 3);
+  t.is(maxOfThree(0, 3, -1), 3);
+  t.is(maxOfThree(10, 3, 50), 50);
+  t.is(maxOfThree(-1, -3, -10), -1);
+});
 
-test('sum()', t => {
-  t.is(sum(8, 11), 19)
-  t.is(sum(4, 100), 104)
-})
+test("sum()", t => {
+  t.is(sum(8, 11), 19);
+  t.is(sum(4, 100), 104);
+});
 
-test('sumOfArray()', t => {
-  t.is(sumOfArray([1, 2]), 3)
-  t.is(sumOfArray([1, 2, 3]), 6)
-  t.is(sumOfArray([10, 9, 8]), 27)
-  t.is(sumOfArray([]), 0)
-})
+test("sumOfArray()", t => {
+  t.is(sumOfArray([1, 2]), 3);
+  t.is(sumOfArray([1, 2, 3]), 6);
+  t.is(sumOfArray([10, 9, 8]), 27);
+  t.is(sumOfArray([]), 0);
+});
 
-test('isVowel()', t => {
-  t.is(isVowel('B'), false)
-  t.is(isVowel('b'), false)
-  t.is(isVowel('t'), false)
-  t.is(isVowel('a'), true)
-  t.is(isVowel('E'), true)
-})
+test("isVowel()", t => {
+  t.is(isVowel("B"), false);
+  t.is(isVowel("b"), false);
+  t.is(isVowel("t"), false);
+  t.is(isVowel("a"), true);
+  t.is(isVowel("E"), true);
+});
 
-test('rovarspraket()', t => {
-  t.is(rovarspraket('a'), 'a')
-  t.is(rovarspraket('b'), 'bob')
-  t.is(rovarspraket('cat'), 'cocatot')
-  t.is(rovarspraket('javascript'), 'jojavovasoscocroripoptot')
-})
+test("rovarspraket()", t => {
+  t.is(rovarspraket("a"), "a");
+  t.is(rovarspraket("b"), "bob");
+  t.is(rovarspraket("cat"), "cocatot");
+  t.is(rovarspraket("javascript"), "jojavovasoscocroripoptot");
+});
 
-test('reverse()', t => {
-  t.is(reverse('books'), 'skoob')
-  t.is(reverse("we don't want no trouble"), "elbuort on tnaw t'nod ew")
-})
+test("reverse()", t => {
+  t.is(reverse("books"), "skoob");
+  t.is(reverse("we don't want no trouble"), "elbuort on tnaw t'nod ew");
+});
 
-test('findLongestWord()', t => {
-  t.is(findLongestWord('book dogs'), 'book')
-  t.is(findLongestWord('life the universe and everything'), 'everything')
-})
+test("findLongestWord()", t => {
+  t.is(findLongestWord("book dogs"), "book");
+  t.is(findLongestWord("life the universe and everything"), "everything");
+});
 
-test('max() can handle non numbers', t => {
-  t.is(max('aaa', 0), 0)
-  t.true(isNaN(max('aaa', 'bbb')))
-})
+test("max() can handle non numbers", t => {
+  t.is(max("aaa", 0), 0);
+  t.true(isNaN(max("aaa", "bbb")));
+});
 
-test('maxOfThree() can handle non numbers', t => {
-  t.is(maxOfThree('aaa', 0, 1), 1)
-  t.true(isNaN(maxOfThree('aaa', 'bbb', 'ccc')))
-})
+test("maxOfThree() can handle non numbers", t => {
+  t.is(maxOfThree("aaa", 0, 1), 1);
+  t.true(isNaN(maxOfThree("aaa", "bbb", "ccc")));
+});
 
 /* eslint-enable */
