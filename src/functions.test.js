@@ -96,6 +96,14 @@ console.log(translate("this is fun"));
  * string "books".
  */
 
+function reverse(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("");
+}
+reverse("skoob");
+
 // ...
 
 /**
@@ -104,6 +112,18 @@ console.log(translate("this is fun"));
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
+function findLongestWord(str) {
+  let strSplit = str.split("");
+  let longestWord = 0;
+  for (var i = 0; i < strSplit.length; i++) {
+    if (strSplit[i].length > longestWord) {
+      longestWord = strSplit[i].length;
+    }
+  }
+  return longestWord;
+}
+
+findLongestWord("book dogs");
 
 // ...
 
