@@ -4,10 +4,10 @@
  * construct available in Javascript.
  */
 
-function max(a, b) {
-  if (a > b) return a;
-  else if (a === b) return 0;
-  else return b;
+function max(num1, num2) {
+  if (num1 > num2) return num1;
+  else if (num1 === num2) return 0;
+  else return num2;
 }
 
 // ...
@@ -16,9 +16,9 @@ function max(a, b) {
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
-let array = [1, 2, 3];
-
-Math.max(a, b, c);
+function maxOfThree(num1, num2, num3) {
+  return Math.max(num1, num2, num3);
+}
 
 // ...
 
@@ -26,13 +26,23 @@ Math.max(a, b, c);
  * Define a function sum() that takes two numbers as
  * arguments and computes the sum of those two numbers.
  */
-
+function sum(num1, num2) {
+  return num1 + num2;
+}
 // ...
 
 /*
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
+function sumOfArray(array) {
+  for (
+    var i = 0, length = array.length, sum = 0;
+    i < length;
+    sum += array[i++]
+  );
+  return sum;
+}
 
 // ...
 
@@ -40,7 +50,16 @@ Math.max(a, b, c);
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
+function isVowel () {
 
+  if (char === 'a' || char === 'A' || char === 'e' || char === 'E' || char === 'i' || char === 'I' || char === 'o' || char === 'O' || char === 'u' || char === 'U') {
+
+  {
+    return true;
+  }
+ 
+
+  
 // ...
 
 /**
@@ -77,7 +96,6 @@ Math.max(a, b, c);
  */
 
 /* eslint-disable no-undef */
-
 import test from "ava";
 
 test("max()", t => {
