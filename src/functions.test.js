@@ -50,16 +50,16 @@ function sumOfArray(array) {
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
-function isVowel () {
+function isVowel(letter) {
+  let vowels = ["a", "e", "i", "o", "u"];
 
-  if (char === 'a' || char === 'A' || char === 'e' || char === 'E' || char === 'i' || char === 'I' || char === 'o' || char === 'O' || char === 'u' || char === 'U') {
-
-  {
-    return true;
+  for (var i = 0; i < vowels.length; i++) {
+    if (letter === vowels[i]) {
+      return true;
+    }
   }
- 
-
-  
+  return false;
+}
 // ...
 
 /**
@@ -70,6 +70,22 @@ function isVowel () {
  * For example, rovarspraket("this is fun") should
  * return the string "tothohisos isos fofunon".
  */
+
+let translate = function(rovarspraket) {
+  let string = rovarspraket.toLowerCase();
+  let vowels = ["a", "e", "i", "o", "u", ""];
+  let y = "";
+  for (i = 0; i < string.length; i++) {
+    let current = string.charAt(i);
+    if (vowels.indexOf(current) != -1) {
+      y = y + current;
+    } else {
+      y = y + (current + "o" + current);
+    }
+  }
+  return y;
+};
+console.log(translate("this is fun"));
 
 // ...
 
@@ -96,7 +112,6 @@ function isVowel () {
  */
 
 /* eslint-disable no-undef */
-import test from "ava";
 
 test("max()", t => {
   t.is(max(1, 3), 3);
@@ -160,3 +175,5 @@ test("maxOfThree() can handle non numbers", t => {
 });
 
 /* eslint-enable */
+
+import test from "ava";
