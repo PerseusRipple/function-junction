@@ -35,12 +35,11 @@ function sum(num1, num2) {
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
-function sumOfArray(array) {
-  for (
-    var i = 0, length = array.length, sum = 0;
-    i < length;
-    sum += array[i++]
-  );
+function sumOfArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
   return sum;
 }
 
@@ -50,16 +49,10 @@ function sumOfArray(array) {
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
-function isVowel(letter) {
-  let vowels = ["a", "e", "i", "o", "u"];
-
-  for (var i = 0; i < vowels.length; i++) {
-    if (letter === vowels[i]) {
-      return true;
-    }
-  }
-  return false;
+function isVowel(x) {
+  return "aeiouAEIOU".indexOf(x) != -1;
 }
+
 // ...
 
 /**
@@ -71,12 +64,12 @@ function isVowel(letter) {
  * return the string "tothohisos isos fofunon".
  */
 
-let translate = function(rovarspraket) {
-  let string = rovarspraket.toLowerCase();
+function rovarspraket(text) {
+  let str = text.toLowerCase();
   let vowels = ["a", "e", "i", "o", "u", ""];
   let y = "";
-  for (i = 0; i < string.length; i++) {
-    let current = string.charAt(i);
+  for (let i = 0; i < str.length; i++) {
+    let current = str.charAt(i);
     if (vowels.indexOf(current) != -1) {
       y = y + current;
     } else {
@@ -84,8 +77,7 @@ let translate = function(rovarspraket) {
     }
   }
   return y;
-};
-console.log(translate("this is fun"));
+}
 
 // ...
 
@@ -113,13 +105,14 @@ reverse("skoob");
  * i.e. findLongestWord("book dogs") should return "book"
  */
 function findLongestWord(str) {
-  let strSplit = str.split("");
-  let longestWord = 0;
-  for (var i = 0; i < strSplit.length; i++) {
-    if (strSplit[i].length > longestWord) {
-      longestWord = strSplit[i].length;
+  let stringArray = str.split(" ");
+  let longestWord = stringArray.reduce((a, b) => {
+    if (b.length > a.length) {
+      return b;
+    } else {
+      return a;
     }
-  }
+  });
   return longestWord;
 }
 
